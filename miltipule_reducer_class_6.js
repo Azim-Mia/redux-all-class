@@ -1,6 +1,6 @@
 
 //require redux
-const {createStore,combineReducers}=require('redux');
+const {createStore,combineReducers,applyMiddleware}=require('redux');
 const GET_PRODUCTS='GET_PRODUCTS';
 const ADD_PRODUCT='ADD_PRODUCT';
 const GET_CARD='GET_CARD';
