@@ -44,4 +44,3 @@ store.subscribe(()=>{
   console.log(store.getState());
 })
 store.dispatch(addProduct('pen'));
-
