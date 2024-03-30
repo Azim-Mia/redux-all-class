@@ -2,27 +2,31 @@
 //action- INCRIMENT, DECRIMENT
 //reducer
 const initialState={
-  count:0
+isLoading:false,
+todos:[],
+error:null,
 }
- const reducerCounter=(state=initialState,action)=>{
+ const todosReducer=(state=initialState,action)=>{
   switch(action.type){
-    case 'INCRIMENT':
+    case 'GET_TODOS_REQUEST':
       return {
         ...state,
-     count:state.count + 1,   
+        isLoading:true,
       }
-   case 'DECRIMENT':
+   case 'GET_TODOS_SUCCESS':
      return {
-...state,
-count:state.count -1,
+       isLoading:false,
+       todos:action.payload,
+       error:null,
      }
-   case 'RESET':
+   case 'GET_TODOS_FAILED':
      return {
       ...state, 
-      count:0,
+      todos:[],
+      error:action.payload,
      }
     default:
     return state
   }
 }
-export default reducerCounter
+export default todosReducer
