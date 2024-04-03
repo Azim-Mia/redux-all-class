@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family:Verdana;
+}
+/* .item must be first */
+.card_container{ 
+  display:grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  margin-top:1rem;
+}
+.card{
+  margin-top:1rem;
+  margin-left:1rem;
+  padding: 20px;
+  border: 1px solid yellow;
+  background: pink;
+  width: 400px;
+  box-shadow: 2px 2px 4px blue;
+}
